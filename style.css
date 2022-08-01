@@ -310,7 +310,7 @@ input#search:focus {
   
   @media screen and (min-width: 801px) {
     body {
-      background-color: rgb(246, 246, 255);
+      background-color: rgb(255, 255, 255);
       
     }
     .tabela1 {

@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+    --main-bg-color: brown; 
+    /*background-color: var(--main-bg-color);*/
+  }
+
+.menu ul {
+	display: flex;
+    
+}
+
+.menu ul li {
+  margin-top: 1em;
+	list-style-type: none;
+  
+    
+}
+
+ul {
+  padding: 0px;
+  border: 1px solid rgba(170, 170, 170, 0.637);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  width: 100%;
+}
+
+li {
+  padding: 0.2% 2% 1% 2%;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
+
+li:hover {
+  border-style: groove;
+  border: 1px solid black;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  cursor: pointer;
+}
+
+
+
+body {
+  margin: 1em 1em;
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  margin: 0px;
+}
+
+header > p {
+  margin-top: 0.5%;
+}
+
+main {
+  display: grid;
+  
+  
+}
+
+
+img#img {
+  width: 16px;
+  height: 15px;
+  padding-left: 8px;
+  background-color: white;
+  margin-top: 9px;
+  margin-left: 7px;
+  margin-right: -6px;
+  padding: 4px ;
+  border-radius: 7px;
+  border-style: none;
+  
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  position: absolute;
+  
+  
+  
+  
+  
+}
+
+button#btnPesquisa {
+  margin-top: 9px;
+  padding: 4px ;
+  border-radius: 3px;
+  border-style: none;
+  position: absolute;
+  margin-left: 20em;
+  
+  
+  
+   
+    
+}
+
+button#btnPesquisa:hover {
+  background-color: #7acc88;
+  cursor: pointer;
+  transition-delay: 30ms;
+  
+}
+
+
+div#pesquisa {
+  width: 100%;
+  height: 40px;
+  background-color: #dfdfdf96;
+  margin: 1em 0em;
+  border-radius: 4px;
+  padding: 5px;
+  position: relative;
+
+  
+}
+
+input#search {
+  position: absolute;
+  margin-top: 9px;
+  
+  margin-left: 2em;
+  padding: 4px ;
+  min-width: 20em;
+  max-width: 30em;
+  border-radius: 3px;
+  border-style: none; 
+  
+  
+  
+}
+
+input#search:focus {
+  outline: 0px;
+
+}
+
+.tabelaF {
+  width: fit-content;
+  padding: 0.5em 1em;
+  font-size: 90%;
+  
+  
+}
+
+
+.linha {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  padding: 1.5%;
+  align-items: center;
+  justify-items: center;
+  
+  
+  
+  
+  text-align: center;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.288);
+  margin: auto auto auto auto;
+  table-layout: fixed;
+  
+
+}
+
+.linhaF {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  padding: 1.5%;
+  align-items: center;
+  justify-items: center;
+  
+  
+  text-align: center;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.288);
+  margin: auto auto auto auto;
+  table-layout: fixed;
+  
+
+}
+
+
+
+.tabela1 {
+  text-transform: capitalize;
+  /*justify-self: flex-start;
+  text-align: start;*/
+
+}
+
+.tabela2 {
+  width: fit-content;
+  justify-self: center;
+}
+
+.tabela3 {
+  width: fit-content;
+  
+}
+
+.tabela4 {
+  background-color: #D1FAE5;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 4%;
+  justify-self: center;
+  
+
+  
+}
+
+.tabela5 {
+  width: fit-content;
+  justify-self: center;
+  }
+
+.tabela6 {
+  align-items: center;
+  width: fit-content;
+
+  
+}
+
+.verifica {
+  width: 16px;
+  display: none;
+}
+
+.btnpedir {
+  padding: 3%;
+  width: 85px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  color: #64748B;
+  background-color: #E7EAEE;
+   
+
+}
+
+
+
+
+.linha2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+    align-content: normal;
+  }
+
+  @media screen and (max-width: 400px) {
+    
+    
+    
+    
+    
+
+  }
+  
+  @media screen and (max-width: 800px) {
+    .linha {       
+        text-align: center;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+
+  .linhaF {
+    
+  }
+    .tabela3 {
+      display: none;
+    }
+
+    .tabela4 {
+      background-color: white;
+    }
+
+    .Disp {
+      display: none;
+      
+      
+    }
+
+    .verifica {
+      display: inline;
+      justify-self: auto;
+      
+      
+    }
+
+    }
+  
+  @media screen and (min-width: 801px) {
+    body {
+      background-color: rgb(246, 246, 255);
+      
+    }
+    .tabela1 {
+      
+    }
+    .Disp {
+    
+    }
+
+    
+}

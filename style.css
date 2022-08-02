@@ -144,7 +144,7 @@ input#search:focus {
 }
 
 .tabelaF {
-  width: fit-content;
+  
   padding: 0.5em 1em;
   font-size: 90%;
   
@@ -204,6 +204,7 @@ input#search:focus {
   text-transform: capitalize;
   /*justify-self: flex-start;
   text-align: start;*/
+  width: fit-content;
 
 }
 
@@ -269,10 +270,7 @@ input#search:focus {
 
   @media screen and (max-width: 400px) {
     
-    
-    
-    
-    
+ 
 
   }
   
@@ -311,6 +309,7 @@ input#search:focus {
   @media screen and (min-width: 801px) {
     body {
       background-color: rgb(255, 255, 255);
+      font-size: 110%;
       
     }
     .tabela1 {

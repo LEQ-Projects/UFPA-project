@@ -68,12 +68,12 @@ main {
 
 
 img#img {
-  width: 16px;
-  height: 15px;
+  width: 17px;
+  height: 19.3px;
   padding-left: 8px;
   background-color: white;
-  margin-top: 9px;
-  margin-left: 7px;
+  margin-top: 7px;
+  margin-left: 6px;
   margin-right: -6px;
   padding: 4px ;
   border-radius: 7px;
@@ -125,11 +125,11 @@ div#pesquisa {
 
 input#search {
   position: absolute;
-  margin-top: 9px;
+  margin-top: 7px;
   
-  margin-left: 2em;
-  padding: 4px ;
-  min-width: 20em;
+  margin-left: 2.3em;
+  padding: 6px ;
+  min-width: 25em;
   max-width: 30em;
   border-radius: 3px;
   border-style: none; 
@@ -268,8 +268,14 @@ input#search:focus {
     align-content: normal;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 401px) {
+    .tabela1 {
+      text-transform: capitalize;
+      /*justify-self: flex-start;
+      text-align: start;*/
+      width: fit-content;
     
+    }
  
 
   }

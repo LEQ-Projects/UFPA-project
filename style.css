@@ -278,7 +278,7 @@ background-color: #E7EAEE;
 
   .linhaHist {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
     height: fit-content;
     padding: 1.5%;
     align-items: center;

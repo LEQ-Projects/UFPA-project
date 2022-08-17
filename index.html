@@ -17,7 +17,7 @@
                 <li class="mainNav" id="reagente" onclick="filterR()">Reagentes</li>
                 <li class="mainNav" id="vidro" onclick="filterV()">Vidraçaria</li>
                 <li class="mainNav" >Outros</li>
-                <li class="mainNav" id="hist" onclick="Mudarestado('tabelaF')">Histórico</li>
+                <li class="mainNav" id="hist" onclick="Mudarestado('tabelaMain')">Histórico</li>
 
             </ul>
         </nav>
@@ -27,14 +27,14 @@
 
    
         
-        <table id="tabelaF">
-        <tr class="linha" >
-            <td class="tabela1">NOME</td>
-            <td class="tabela2">RECIPIENTE</td>
-            <td class="tabela3">TAG</td>
-            <td>STATUS</td>
-            <td class="tabela5">QUANTIDADE</td>
-            <td class="tabela6"></td>
+        <table id="tabelaMain">
+        <tr class="linhaHead" >
+            <th class="tabela1">NOME</th>
+            <th class="tabela2">RECIPIENTE</th>
+            <th class="tabela3">TAG</th>
+            <th>STATUS</th>
+            <th class="tabela5">QUANTIDADE</th>
+            <th class="tabela6"></th>
         </tr>
         <tr class="linha" >
             <td class="tabela1">Acetona PA ACS</td>
@@ -643,18 +643,18 @@
 
     </table>
 
-            <table id="tabelaHist">
-                <tr class="linhaHist">
-                    <td class="tabela1" >NOME</td>
-                    <td class="tabela2">QUANTIDADE</td>
-                    <td class="tabela3">REQUISITANTE</td>
-                    <td>OPERAÇÃO</td>
-                    <td >DATA</td>
-                    <td class="tabela5">JUSTIFICATIVA</td>
+            <table id="tabelaHistorico">
+                <tr class="linhaHistorico">
+                    <th class="tabela1" >NOME</th>
+                    <th class="tabela2">QUANTIDADE</th>
+                    <th class="tabela3">REQUISITANTE</th>
+                    <th>OPERAÇÃO</th>
+                    <th>DATA</th>
+                    <th class="tabela5">JUSTIFICATIVA</th>
                 </tr>
 
-                <tr class="linhaHist">
-                    <td class="tabela1" >Alcool etilico 99,8% PA ACS</td>
+                <tr class="linhaHistorico">
+                    <td class="tabela1" >Alcool etilico absoluto 99,8% PA</td>
                     <td class="tabela2">1</td>
                     <td class="tabela3">Bolsista Rafaela</td>
                     <td>Saída</td>

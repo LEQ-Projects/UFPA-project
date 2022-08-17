@@ -84,9 +84,6 @@ border-top-right-radius: 0px;
 position: absolute;
 
 
-
-
-
 }
 
 button#btnPesquisa {
@@ -97,9 +94,6 @@ border-style: none;
 position: absolute;
 margin-left: 20em;
 
-
-
- 
   
 }
 
@@ -135,7 +129,6 @@ border-radius: 3px;
 border-style: none; 
 
 
-
 }
 
 input#search:focus {
@@ -143,7 +136,7 @@ outline: 0px;
 
 }
 
-#tabelaF {
+#tabelaMain {
 
 padding: 0.5em 1em;
 font-size: 90%;
@@ -157,10 +150,8 @@ display: grid;
 grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
 height: fit-content;
 padding: 1.5%;
-align-items: center;
+
 justify-items: center;
-
-
 
 
 text-align: center;
@@ -175,6 +166,28 @@ table-layout: fixed;
 
 
 }
+
+.linhaHead {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  padding: 1.5%;
+  
+  justify-items: center;
+  
+  
+  text-align: center;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.288);
+  margin: auto auto auto auto;
+  table-layout: fixed;
+  
+  
+  }
 
 .linhaF {
 display: grid;
@@ -257,9 +270,7 @@ background-color: #E7EAEE;
 }
 
 
-
-
-.linha2 {
+.linha22 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -269,14 +280,14 @@ background-color: #E7EAEE;
 }
 
 
-  #tabelaHist {
+  #tabelaHistorico {
     padding: 0.5em 1em;
     font-size: 90%;
     display: none;
   
   }
 
-  .linhaHist {
+  .linhaHistorico {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
     height: fit-content;
@@ -360,19 +371,56 @@ background-color: #E7EAEE;
   @media screen and (max-width: 800px) {
     .linha {       
         text-align: center;
-        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .linhaF {
-    
+  .linhaHead {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+
+    #tabelaMain {
+      padding: 0px;
+    }
+
+    .linhaHistorico {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    body {
+      font-size: 85%;
+    }
+
+    .tabela1 {
+      background-color: white;
+      justify-self: flex-start;
+      text-align: start;
+    }
+
+    .tabela2 {
+      background-color: white;
+      
+    }
+
     .tabela3 {
       display: none;
+      
     }
 
     .tabela4 {
       background-color: white;
+      
     }
+
+    .tabela5 {
+      background-color: white;
+    }
+
+    .tabela6 {
+      display: none;
+    }
+
+    
 
     .Disp {
       display: none;

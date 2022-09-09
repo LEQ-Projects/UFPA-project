@@ -25,8 +25,8 @@ function filterR() {
         }
         else {
             x[i].style.display= "";
-            document.getElementById('tabelaMain').style.display = 'grid';
-            document.getElementById('pesquisa').style.display = 'grid';
+            document.getElementById('tabelaMain').style.display = 'table';
+            document.getElementById('pesquisa').style.display = 'flex';
             document.getElementById('tabelaHistorico').style.display = 'none';
                           
         }
@@ -44,8 +44,8 @@ function filterV() {
         }
         else {
             x[i].style.display= "";
-            document.getElementById('tabelaMain').style.display = 'grid';
-            document.getElementById('pesquisa').style.display = 'grid';
+            document.getElementById('tabelaMain').style.display = 'table';
+            document.getElementById('pesquisa').style.display = 'flex';
             document.getElementById('tabelaHistorico').style.display = 'none';
                           
         }
@@ -64,8 +64,8 @@ function filterG() {
         }        
         else {
             x[i].style.display= "";
-            document.getElementById('tabelaMain').style.display = 'grid';
-            document.getElementById('pesquisa').style.display = 'grid';
+            document.getElementById('tabelaMain').style.display = 'table';
+            document.getElementById('pesquisa').style.display = 'flex';
             document.getElementById('tabelaHistorico').style.display = 'none';
                           
         }
@@ -85,5 +85,12 @@ function Mudarestado(el) {
         document.getElementById('tabelaHistorico').style.display = 'grid';}
 
 function showIt() {
-    document.getElementById('desc').style.visibility = 'visible';
+    var display = document.getElementById('tabelaDescricao').style.display;
+    if(display == "none"){
+        document.getElementById('tabelaDescricao').style.display = 'table-cell';
+        
+        }
+    else{ 
+        document.getElementById('tabelaDescricao').style.display = 'none';}
+    
 }

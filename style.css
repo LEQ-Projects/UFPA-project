@@ -5,12 +5,17 @@
   /*background-color: var(--main-bg-color);*/
 }
 
-.menu ul {
+*{
+ /*padding: 0;
+  margin: 0;*/
+}
+
+.menu-container ul {
 display: flex;
   
 }
 
-.menu ul li {
+.menu-container ul li {
 margin-top: 1em;
 list-style-type: none;
 
@@ -56,7 +61,7 @@ font-weight: bold;
 margin: 0px;
 }
 
-header > p {
+header p {
 margin-top: 0.5%;
 }
 
@@ -66,27 +71,7 @@ display: grid;
 
 }
 
-
-img#img {
-width: 17px;
-height: 20px;
-padding-left: 8px;
-background-color: white;
-margin-top: 7px;
-margin-left: 6px;
-margin-right: -6px;
-padding: 4px ;
-border-radius: 7px;
-border-style: none;
-
-border-bottom-right-radius: 0px;
-border-top-right-radius: 0px;
-position: absolute;
-
-
-}
-
-button#btnPesquisa {
+/*button#btnPesquisa {
 margin-top: 9px;
 padding: 4px ;
 border-radius: 3px;
@@ -95,15 +80,15 @@ position: absolute;
 margin-left: 20em;
 
   
-}
+}*/
 
-button#btnPesquisa:hover {
+/*button#btnPesquisa:hover {
 background-color: #7acc88;
 cursor: pointer;
 transition-delay: 30ms;
 
 }
-
+*/
 
 div#pesquisa {
 width: 100%;
@@ -112,18 +97,21 @@ background-color: #dfdfdf96;
 margin: 1em 0em;
 border-radius: 4px;
 padding: 5px;
-position: relative;
+/*position: relative;*/
+display: flex;
+justify-content: flex-start;
+align-items: center;
 
 
 }
 
 input#search {
-position: absolute;
-margin-top: 7px;
+/*position: absolute;*/
+/*margin-top: 11.5px;*/
 
 margin-left: 2.3em;
 padding: 6px ;
-min-width: 25em;
+width: 100%;
 max-width: 30em;
 border-radius: 3px;
 border-style: none; 
@@ -136,34 +124,36 @@ outline: 0px;
 
 }
 
+img#img {
+  width: 17px;
+  height: 20px;
+  padding-left: 8px;
+  background-color: white;
+  
+  margin-left: 7px;
+  margin-right: -6px;
+  padding: 4px ;
+  border-radius: 7px;
+  border-style: none;
+  
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  position: absolute;
+  
+  
+  }
+
 #tabelaMain {
 
 padding: 0.5em 1em;
 font-size: 90%;
+border-spacing: 0;
 
 
 }
 
-
-.linha {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-height: fit-content;
-padding: 1.5%;
-
-justify-items: center;
-
-
-text-align: center;
-border-top: 0px;
-border-left: 0px;
-border-right: 0px;
-border-bottom: 1px;
-border-style: solid;
-border-color: rgba(0, 0, 0, 0.288);
-margin: auto auto auto auto;
-table-layout: fixed;
-
+#tabelaMain .linha:hover {
+  background-color: #8f8f8f59;
 
 }
 
@@ -183,34 +173,54 @@ table-layout: fixed;
   border-bottom: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.288);
-  margin: auto auto auto auto;
+  margin: auto;
   table-layout: fixed;
   
   
   }
 
-.linhaF {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-height: fit-content;
-padding: 1.5%;
-align-items: center;
-justify-items: center;
-
-
-text-align: center;
-border-top: 0px;
-border-left: 0px;
-border-right: 0px;
-border-bottom: 1px;
-border-style: solid;
-border-color: rgba(0, 0, 0, 0.288);
-margin: auto auto auto auto;
-table-layout: fixed;
-
-
+  .linha {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    height: fit-content;
+    padding: 1.5%;
+    
+    justify-items: center;
+    align-items: center;
+    
+    /*text-align: center;*/
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.288);
+    margin: auto;
+    table-layout: fixed;
+    cursor: pointer;
+    box-sizing: border-box;    
 }
-
+  /*.linhaF {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    height: fit-content;
+    padding: 1.5%;
+    align-items: center;
+    justify-items: center;
+    
+    text-align: center;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.288);
+    margin: auto auto auto auto;
+    table-layout: fixed;
+    
+    
+    }*/
+    
 
 
 .tabela1 {
@@ -265,7 +275,6 @@ width: 85px;
 border: 2px solid rgba(255, 255, 255, 0);
 color: #64748B;
 background-color: #E7EAEE;
- 
 
 }
 
@@ -303,13 +312,12 @@ background-color: #E7EAEE;
     border-bottom: 1px;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.288);
-    margin: auto auto auto auto;
+    margin: auto;
     table-layout: fixed;
     
-  
   }
 
-  .linhaDesc {
+  /*.linhaDesc {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
     height: fit-content;
@@ -327,35 +335,63 @@ background-color: #E7EAEE;
     margin: auto auto auto auto;
     table-layout: fixed;
     
-    }
+    }*/
 
 
-  .tabelaDesc {
+  #tabelaDescricao {
+    text-align: center;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.288);
+    margin: auto;
+    table-layout: fixed;
     text-transform: capitalize;
     /*justify-self: flex-start;
     text-align: start;*/
     width: fit-content;
-    visibility: hidden;
+    height: 70px;
+    display: none;
     
     }
+
+    .dropdown_menu {
+    animation: growDown 200ms ease-in-out forwards;
+    transform-origin: top center;}
+
+    
+
+    @keyframes growDown {
+      0% {
+          transform: scaleY(0.1)
+      }
+
+      30% {
+        transform: scaleY(0.3);
+      }
+
+      50% {
+        transform: scaleY(0.5);
+      }
+
+      80% {
+          transform: scaleY(0.8)
+      }
+      100% {
+          transform: scaleY(1)
+      }
+  }
+  
     
     a {
       text-decoration: none;
       color: black;
     }
 
-   
-
-    table#tabelaF tr td a:hover tr.tabelaDesc{
-      visibility: visible;
-      
-      
-    }
 
    
-
-
-
   @media screen and (max-width: 401px) {
     .tabela1 {
       text-transform: capitalize;
@@ -384,7 +420,8 @@ background-color: #E7EAEE;
     }
 
     .linhaHistorico {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      ;
     }
 
     body {
@@ -420,19 +457,23 @@ background-color: #E7EAEE;
       display: none;
     }
 
-    
+    #tabelaHistorico .linhaHistorico .tabela5{
+      display: none;
+    }
+
+    #tabelaHistorico {
+      padding: 0px
+    }  
 
     .Disp {
       display: none;
-      
       
     }
 
     .verifica {
       display: inline;
       justify-self: auto;
-      
-      
+       
     }
 
     }
@@ -449,6 +490,5 @@ background-color: #E7EAEE;
     .Disp {
     
     }
-
     
 }

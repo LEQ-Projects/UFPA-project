@@ -11,7 +11,7 @@
     <Header>
         <h1>Banco de Materiais LEQ - UFPA</h1>
         <p>Visualize e requisite materiais do Laboratório de Engenharia Química</p>
-        <nav class="menu">
+        <nav class="menu-container">
             <ul id="mainList" style="list-style-type:none;">
                 <li class="mainNav" id="geral" onclick="filterG()"">Geral</li>
                 <li class="mainNav" id="reagente" onclick="filterR()">Reagentes</li>
@@ -36,13 +36,16 @@
             <th class="tabela5">QUANTIDADE</th>
             <th class="tabela6"></th>
         </tr>
-        <tr class="linha" >
-            <td class="tabela1">Acetona PA ACS</td>
+        <tr class="linha" onclick="showIt()" >
+            <td class="tabela1" >Acetona PA ACS</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
             <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">4</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
+        </tr>
+        <tr >
+            <td id="tabelaDescricao" class="dropdown_menu">Descrição</td>
         </tr>
         
 
@@ -638,6 +641,15 @@
             <td class="tabela3">Vidraçaria</td>
             <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">5</td>
+            <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
+        </tr>
+
+        <tr class="linha">
+            <td class="tabela1">Tubo de RMN</td>
+            <td class="tabela2"></td>
+            <td class="tabela3">Vidraçaria</td>
+            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela5">30</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
 

@@ -248,9 +248,16 @@ width: fit-content;
 padding: 4%;
 justify-self: center;
 
-
-
 }
+
+.tabela4W {
+  background-color: #f3b8b8;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 4%;
+  justify-self: center;
+  
+  }
 
 .tabela5 {
 width: fit-content;
@@ -268,6 +275,7 @@ width: fit-content;
 width: 16px;
 display: none;
 }
+
 
 .btnpedir {
 padding: 3%;
@@ -447,6 +455,10 @@ background-color: #E7EAEE;
     .tabela4 {
       background-color: white;
       
+    }
+
+    .tabela4W {
+      background-color: white;
     }
 
     .tabela5 {

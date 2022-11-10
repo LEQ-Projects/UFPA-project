@@ -1,7 +1,26 @@
+function acent(inStr) {
+    return inStr.replace(
+      /([àáâãäå])|([çčć])|([èéêë])|([ìíîï])|([ñ])|([òóôõöø])|([ß])|([ùúûü])|([ÿ])|([æ])/g, 
+      function (str, a, c, e, i, n, o, s, u, y, ae) {
+        if (a) return 'a';
+        if (c) return 'c';
+        if (e) return 'e';
+        if (i) return 'i';
+        if (n) return 'n';
+        if (o) return 'o';
+        if (s) return 's';
+        if (u) return 'u';
+        if (y) return 'y';
+        if (ae) return 'ae';
+      }
+    );
+  }
+
 function search() {
     let input = document.getElementById('search').value
-    input=input.toLowerCase();
+    input = input.toLowerCase();
     let x = document.getElementsByClassName('linha');
+    input = acent(input)
       
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {

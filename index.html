@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco de Materiais</title>
+    <title>SIGEMAP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <Header>
-        <h1>Banco de Materiais LEQ - UFPA</h1>
-        <p>Visualize e requisite materiais do Laboratório de Engenharia Química</p>
+        <h1>Sistema de Gerenciamento de Materiais e Produtos</h1>
+        <p> Consulte e visualize os materiais do Laboratório de Biolfilmes da Amazônia </p>
         <nav class="menu-container">
             <ul id="mainList" style="list-style-type:none;">
-                <li class="mainNav" id="geral" onclick="filterG()"">Geral</li>
+                <li class="mainNav" id="geral" onclick="filterG()">Geral</li>
                 <li class="mainNav" id="reagente" onclick="filterR()">Reagentes</li>
                 <li class="mainNav" id="vidro" onclick="filterV()">Vidraçaria</li>
-                <li class="mainNav" >Outros</li>
+                <li class="mainNav" id="outros" onclick="filterOther()" >Outros</li>
                 <li class="mainNav" id="hist" onclick="Mudarestado('tabelaMain')">Histórico</li>
 
             </ul>
         </nav>
-        <div id="pesquisa"><img id="img" src="procurar.png" alt="procurar"><input type="search" name="Pesquise pelo nome do material"  id="search" onkeyup="search()" placeholder="Pesquise pelo nome do material"></div>
+        <div id="pesquisa"><input type="search" name="Pesquise pelo nome do material"  id="search" onkeyup="search()" placeholder="Pesquise pelo nome do material"></div>
     </Header>
     <main>
 
-   
         
         <table id="tabelaMain">
         <tr class="linhaHead" >
@@ -41,7 +40,7 @@
             <td class="tabela1">Acetona PA ACS</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -53,8 +52,8 @@
             <td class="tabela1">Acido Fosforico-orto PA ACS</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
-            <td class="tabela5">6</td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela5">4</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
 
@@ -62,7 +61,7 @@
             <td class="tabela1">Acido Galico Anidro</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -71,7 +70,7 @@
             <td class="tabela1">Acido Nitrico PA ACS</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -80,7 +79,7 @@
             <td class="tabela1">Acido Sulfonico</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">4</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -89,7 +88,7 @@
             <td class="tabela1">Agua Deionizada</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">4</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -98,7 +97,7 @@
             <td class="tabela1">Alcool ceto estearilico etoxilado purissimo</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">16</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -107,17 +106,8 @@
             <td class="tabela1">Alcool Etilico PA 99.5%</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
-            <td class="tabela5">46</td>
-            <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
-        </tr>
-
-        <tr class="linha">
-            <td class="tabela1">Alcool Etilico PA ACS 95%</td>
-            <td class="tabela2">1000ml</td>
-            <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
-            <td class="tabela5">1</td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela5">36</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
 
@@ -125,7 +115,7 @@
             <td class="tabela1">Brometo de Potassio PA</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -134,7 +124,7 @@
             <td class="tabela1">Butil Hidroxi Toluol USP BHT</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">9</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -143,7 +133,7 @@
             <td class="tabela1">Carbonato de Sodio Anidro PA</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -152,7 +142,7 @@
             <td class="tabela1">Cloroformio Adulterado</td>
             <td class="tabela2">100ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -161,7 +151,7 @@
             <td class="tabela1">Folin Ciocalteu Fenol 2M</td>
             <td class="tabela2">100ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -170,7 +160,7 @@
             <td class="tabela1">Formoldeido PA</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -179,7 +169,7 @@
             <td class="tabela1">Glicerina PA ACS</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">4</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -188,7 +178,7 @@
             <td class="tabela1">Hexano</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">39</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -197,7 +187,7 @@
             <td class="tabela1">Hidroxido de Potássio Escama PA ACS</td>
             <td class="tabela2">1000g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -206,8 +196,8 @@
             <td class="tabela1">Hidroxido de Sodio PA ACS Microperolas</td>
             <td class="tabela2">1000g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
-            <td class="tabela5">4</td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
 
@@ -215,7 +205,7 @@
             <td class="tabela1">Hidroxido de Sodio Perolado</td>
             <td class="tabela2">1000g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">11</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -224,7 +214,7 @@
             <td class="tabela1">Metanol PA</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">9</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -233,7 +223,7 @@
             <td class="tabela1">Metoxido de Sodio</td>
             <td class="tabela2"></td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -242,7 +232,7 @@
             <td class="tabela1">Miristrato de Isopropila Purissimo</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -251,7 +241,7 @@
             <td class="tabela1">Monoetilenoglicol PA</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">4</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -260,7 +250,7 @@
             <td class="tabela1">Oxido de Titanio IV</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -269,7 +259,7 @@
             <td class="tabela1">Papel Filtro Qualitativo</td>
             <td class="tabela2">80g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -278,7 +268,7 @@
             <td class="tabela1">Silica</td>
             <td class="tabela2">Saco</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -287,7 +277,7 @@
             <td class="tabela1">Sorbitol 70% USP</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">15</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -296,7 +286,7 @@
             <td class="tabela1">Sulfato Cerico</td>
             <td class="tabela2"></td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -305,7 +295,7 @@
             <td class="tabela1">Sulfato de amonio PA ACS</td>
             <td class="tabela2">1000g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -314,7 +304,7 @@
             <td class="tabela1">Sulfato de Sodio Anidro PA</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -323,7 +313,7 @@
             <td class="tabela1">Sulfato Ferroso Amonio</td>
             <td class="tabela2">500g</td>
             <td class="tabela3">Reagente</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -334,7 +324,7 @@
             <td class="tabela1">Balao Fundo Chato</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -343,7 +333,7 @@
             <td class="tabela1">Balao Fundo Redondo</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -352,7 +342,7 @@
             <td class="tabela1">Balao Volumetrico</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4W"> <img src="cancelar.png" alt="verifica" class="verifica"> <strong class="Disp">Indisponível</strong></td>
+            <td class="tabela4W"> <p class="verifica">&#9940;</p> <strong class="Disp">Indisponível</strong></td>
             <td class="tabela5">0</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -361,7 +351,7 @@
             <td class="tabela1">Balao Volumetrico</td>
             <td class="tabela2">500ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">6</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -370,7 +360,7 @@
             <td class="tabela1">Becker</td>
             <td class="tabela2">400ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">100</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -379,7 +369,7 @@
             <td class="tabela1">Becker</td>
             <td class="tabela2">250ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">151</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -388,7 +378,7 @@
             <td class="tabela1">Cadinho</td>
             <td class="tabela2"></td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">6</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -397,7 +387,7 @@
             <td class="tabela1">Clevenger</td>
             <td class="tabela2"></td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">5</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -406,7 +396,7 @@
             <td class="tabela1">Elermeyer</td>
             <td class="tabela2">1000ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -415,7 +405,7 @@
             <td class="tabela1">Elermeyer</td>
             <td class="tabela2">500ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">74</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -424,7 +414,7 @@
             <td class="tabela1">Elermeyer</td>
             <td class="tabela2">250ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">150</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -433,7 +423,7 @@
             <td class="tabela1">Funil de Vidro</td>
             <td class="tabela2">Grande</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4W"> <img src="cancelar.png" alt="verifica" class="verifica"> <strong class="Disp">Indisponível</strong></td>
+            <td class="tabela4W"> <p class="verifica">&#9940;</p> <strong class="Disp">Indisponível</strong></td>
             <td class="tabela5">0</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -442,7 +432,7 @@
             <td class="tabela1">Picnometros</td>
             <td class="tabela2"></td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">14</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -451,7 +441,7 @@
             <td class="tabela1">Pipeta Pasteur</td>
             <td class="tabela2">500Unid</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -460,7 +450,7 @@
             <td class="tabela1">Proveta</td>
             <td class="tabela2">100ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4W"> <img src="cancelar.png" alt="verifica" class="verifica"> <strong class="Disp">Indisponível</strong></td>
+            <td class="tabela4W"> <p class="verifica">&#9940;</p> <strong class="Disp">Indisponível</strong></td>
             <td class="tabela5">0</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -469,7 +459,7 @@
             <td class="tabela1">Proveta</td>
             <td class="tabela2">50ml</td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4W"> <img src="cancelar.png" alt="verifica" class="verifica"> <strong class="Disp">Indisponível</strong></td>
+            <td class="tabela4W"> <p class="verifica">&#9940;</p> <strong class="Disp">Indisponível</strong></td>
             <td class="tabela5">0</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -478,7 +468,7 @@
             <td class="tabela1">Tubo de RMN</td>
             <td class="tabela2"></td>
             <td class="tabela3">Vidraçaria</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">15</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -487,7 +477,7 @@
             <td class="tabela1">Avental</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -496,7 +486,7 @@
             <td class="tabela1">Avental TNT</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -505,7 +495,7 @@
             <td class="tabela1">Luva Borracha</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">2</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -514,7 +504,7 @@
             <td class="tabela1">Luva Borracha 2</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -523,7 +513,7 @@
             <td class="tabela1">Luva Estufa</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -532,7 +522,7 @@
             <td class="tabela1">Luva Mitrilica s/ Forro</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">9</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -541,7 +531,7 @@
             <td class="tabela1">Luva Multiuso</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">10</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -550,7 +540,7 @@
             <td class="tabela1">Luva Segurança</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">6</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -559,7 +549,7 @@
             <td class="tabela1">Mascara c/ Filtro</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">3</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -568,7 +558,7 @@
             <td class="tabela1">Mascara Descartavel</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">5</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -577,7 +567,7 @@
             <td class="tabela1">Mascara PFF2</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">10</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -586,7 +576,7 @@
             <td class="tabela1">Oculos de Proteçao</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">10</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -595,7 +585,7 @@
             <td class="tabela1">Touca de Cabelo</td>
             <td class="tabela2"></td>
             <td class="tabela3">Outros</td>
-            <td class="tabela4"> <img src="verifica.png" alt="verifica" class="verifica"> <strong class="Disp">Disponível</strong></td>
+            <td class="tabela4"> <p class="verifica">&#9989;</p> <strong class="Disp">Disponível</strong></td>
             <td class="tabela5">1 Pct</td>
             <td class="tabela6"><abbr title="Função indisponível"><input type="button" value="Pedir" class="btnpedir"></abbr></td>
         </tr>
@@ -782,7 +772,7 @@
                     <td>28/11/2022</td>
                     <td class="tabela5"></td>
                 </tr>
-///
+
                 <tr class="linhaHistorico">
                     <td class="tabela1" >Alcool etilico absoluto 99,8% PA</td>
                     <td class="tabela2">2</td>

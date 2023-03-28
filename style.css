@@ -2,13 +2,8 @@
 
 :root {
   --main-bg-color: brown; 
-  /*background-color: var(--main-bg-color);*/
 }
 
-*{
- /*padding: 0;
-  margin: 0;*/
-}
 
 .menu-container ul {
 display: flex;
@@ -71,24 +66,6 @@ display: grid;
 
 }
 
-/*button#btnPesquisa {
-margin-top: 9px;
-padding: 4px ;
-border-radius: 3px;
-border-style: none;
-position: absolute;
-margin-left: 20em;
-
-  
-}*/
-
-/*button#btnPesquisa:hover {
-background-color: #7acc88;
-cursor: pointer;
-transition-delay: 30ms;
-
-}
-*/
 
 div#pesquisa {
 width: 100%;
@@ -97,7 +74,7 @@ background-color: #dfdfdf96;
 margin: 1em 0em;
 border-radius: 4px;
 padding: 5px;
-/*position: relative;*/
+
 display: flex;
 justify-content: flex-start;
 align-items: center;
@@ -106,8 +83,7 @@ align-items: center;
 }
 
 input#search {
-/*position: absolute;*/
-/*margin-top: 11.5px;*/
+
 
 margin-left: 1em;
 padding: 6px ;
@@ -188,7 +164,7 @@ border-spacing: 0;
     justify-items: center;
     align-items: center;
     
-    /*text-align: center;*/
+  
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -200,33 +176,11 @@ border-spacing: 0;
     cursor: pointer;
     box-sizing: border-box;    
 }
-  /*.linhaF {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-    height: fit-content;
-    padding: 1.5%;
-    align-items: center;
-    justify-items: center;
-    
-    text-align: center;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.288);
-    margin: auto auto auto auto;
-    table-layout: fixed;
-    
-    
-    }*/
-    
+
 
 
 .tabela1 {
 text-transform: capitalize;
-/*justify-self: flex-start;
-text-align: start;*/
 width: fit-content;
 
 }
@@ -325,25 +279,6 @@ background-color: #E7EAEE;
     
   }
 
-  /*.linhaDesc {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-    height: fit-content;
-    padding: 1.5%;
-    align-items: center;
-    justify-items: center;
-    
-    text-align: center;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.288);
-    margin: auto auto auto auto;
-    table-layout: fixed;
-    
-    }*/
 
 
   #tabelaDescricao {
@@ -357,8 +292,7 @@ background-color: #E7EAEE;
     margin: auto;
     table-layout: fixed;
     text-transform: capitalize;
-    /*justify-self: flex-start;
-    text-align: start;*/
+
     width: fit-content;
     height: 70px;
     display: none;
@@ -403,8 +337,6 @@ background-color: #E7EAEE;
   @media screen and (max-width: 401px) {
     .tabela1 {
       text-transform: capitalize;
-      /*justify-self: flex-start;
-      text-align: start;*/
       width: fit-content;
     
     }
@@ -489,18 +421,3 @@ background-color: #E7EAEE;
     }
 
     }
-  
-  @media screen and (min-width: 801px) {
-    body {
-      background-color: rgb(255, 255, 255);
-      
-      
-    }
-    .tabela1 {
-      
-    }
-    .Disp {
-    
-    }
-    
-}
